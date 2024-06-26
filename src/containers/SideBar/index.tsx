@@ -8,12 +8,12 @@ const SideBar = () => {
       <div>
         <Input />
         <S.FiltersContainer>
-            <CardFilter />
-            <CardFilter />
-            <CardFilter />
-            <CardFilter />
-            <CardFilter />
-            <CardFilter ativo/>
+            <CardFilter subtitle='pendentes' count={1} />
+            <CardFilter subtitle='concluídas' count={2}/>
+            <CardFilter subtitle='urgentes' count={3} />
+            <CardFilter subtitle='importantes' count={4}/>
+            <CardFilter subtitle='normal' count={5}/>
+            <CardFilter subtitle='todas' count={10} ativo/>
         </S.FiltersContainer>
       </div>
     </S.Aside>

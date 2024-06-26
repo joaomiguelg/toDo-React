@@ -2,7 +2,9 @@ import styled from "styled-components";
 
 import { Props }  from './index'
 
-export const Card = styled.div<Props>`
+type PropsWithNoNumberAndSubtitle = Omit<Props, 'count' | 'subtitle'>
+
+export const Card = styled.div<PropsWithNoNumberAndSubtitle>`
   padding: 8px;
   border: 1px solid ${(props) => (props.ativo ? "#1E90FF" : "#a1a1a1")};
   background-color: ${(props) => (props.ativo ? "#fff" : "#fcfcfc")};
