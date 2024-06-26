@@ -1,4 +1,33 @@
 import styled from "styled-components";
+import vars from "../../styles/vars";
+
+import * as enums from '../../utils/enums/Task'
+
+type TagProps = {
+    priority?: enums.Priority,
+    status?: enums.Status,
+    param: 'status' | 'priority'
+}
+
+function returnBackgroundTag(props: TagProps): string {
+
+    if(props.param === 'priority') {
+
+        if (props.priority === enums.Priority.URGENTE) return vars.red
+        if (props.priority === enums.Priority.IMPORTANTE) return vars.yellow2
+
+    } else {
+
+        if (props.status === enums.Status.PENDENTE) return vars.yellow
+        if (props.status === enums.Status.CONCLUIDO) return vars.green
+
+    }
+
+
+    return '#ccc'
+
+}
+
 
 export const Card = styled.div`
 
@@ -19,13 +48,13 @@ margin-bottom: 16px;
 
 `
 
-export const Tag = styled.span`
+export const Tag = styled.span<TagProps>`
 
 padding: 4px 8px;
 color: #ffff;
 font-weight: bold;
 font-size: 10px;
-background-color: #E1A32A;
+background-color: ${(props) => returnBackgroundTag(props)};
 border-radius: 8px;
 margin-right: 16px;
 display: inline-block;
@@ -68,5 +97,17 @@ cursor: pointer;
 background-color: #2f3640;
 border-radius: 8px;
 margin-right: 8px;
+
+`
+
+export const SaveButton = styled(Button)`
+
+background-color: ${vars.green};
+
+`
+
+export const CancelButton = styled(Button)`
+
+background-color: ${vars.red};
 
 `

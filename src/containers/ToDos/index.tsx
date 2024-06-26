@@ -2,23 +2,25 @@ import Task from "../../components/Task";
 
 import * as S from './styles'
 
+import * as enums from '../../utils/enums/Task'
+
 const tasks = [
   {
     title: 'estudar react',
-    priority: 'importante',
-    status: 'concluido',
+    priority: enums.Priority.URGENTE,
+    status: enums.Status.PENDENTE,
     descrition: 'esudar react exercico 16'
   },
   {
     title: 'estudar java',
-    priority: 'importante',
-    status: 'concluido',
+    priority: enums.Priority.IMPORTANTE,
+    status: enums.Status.PENDENTE,
     descrition: 'esudar java exercico 16'
   },
   {
     title: 'estudar node',
-    priority: 'importante',
-    status: 'pendente',
+    priority: enums.Priority.NORMAL,
+    status: enums.Status.CONCLUIDO,
     descrition: 'esudar node exercico 20'
   }
 ]
