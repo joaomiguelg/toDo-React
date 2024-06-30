@@ -12,10 +12,7 @@ function App() {
     <Container>
       <SideBar />
       <ToDos />
-
-
     </Container>
-      
     </>
   )
 }
