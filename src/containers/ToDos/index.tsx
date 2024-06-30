@@ -4,14 +4,14 @@ import * as S from './styles'
 import { RootReducer } from "../../store";
 
 const ToDos = () => {
-  const {tasks} = useSelector((state: RootReducer) => state)
+  const {itens} = useSelector((state: RootReducer) => state.tasks)
   return (
     <S.Container>
       <p>2 tarefas marcadas como: 'categoria' e 'termo'</p>
       <ul>
-        {tasks.map((t) => (
+        {itens.map((t) => (
           <li key={t.title}>
-            <Task description={t.description} title={t.title} status={t.status} priority={t.priority} />
+            <Task id={t.id} description={t.description} title={t.title} status={t.status} priority={t.priority} />
           </li>
         ))}
       </ul>
