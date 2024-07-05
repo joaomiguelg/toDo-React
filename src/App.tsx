@@ -1,9 +1,21 @@
-import ToDos from "./containers/ToDos"
-import SideBar from "./containers/SideBar"
+
 import GlobalStyle, { Container } from "./styles"
 import { Provider } from 'react-redux'
 import store from './store'
+import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import Home from "./pages/Home"
 
+
+const routes = createBrowserRouter([
+  {
+    path: '/',
+    element: <Home />
+  },
+  {
+    path: '/novo',
+    element: <h1> nova tarefa</h1>
+  }
+])
 
 function App() {
   
@@ -12,8 +24,7 @@ function App() {
     <Provider store={store}>
       <GlobalStyle />
       <Container>
-        <SideBar />
-        <ToDos />
+        <RouterProvider router={routes} />
       </Container>
     </Provider>
   )
