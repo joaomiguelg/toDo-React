@@ -12,10 +12,9 @@ function App() {
     <Provider store={store}>
       <GlobalStyle />
       <Container>
-      <SideBar />
-      <ToDos />
-    </Container>
-      
+        <SideBar />
+        <ToDos />
+      </Container>
     </Provider>
   )
 }

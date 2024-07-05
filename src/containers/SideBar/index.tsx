@@ -3,6 +3,8 @@ import { Input } from "../../components/Input";
 import * as S from "./styles";
 
 const SideBar = () => {
+  
+
   return (
     <S.Aside>
       <div>
