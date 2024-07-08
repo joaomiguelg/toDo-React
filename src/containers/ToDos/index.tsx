@@ -45,7 +45,7 @@ const ToDos = () => {
   const message = showResult(tasks.length)
   return (
     <S.Container>
-      <S.Result>{message}</S.Result>
+      <S.Title>{message}</S.Title>
       <ul>
         {tasks.map((t) => (
           <li key={t.title}>

@@ -1,3 +1,4 @@
+import AddButton from "../../components/AddButton";
 import SideBar from "../../containers/SideBar";
 import ToDos from "../../containers/ToDos";
 
@@ -6,6 +7,7 @@ const Home = () => {
     <>
       <SideBar />
       <ToDos />
+      <AddButton />
     </>
   );
 };

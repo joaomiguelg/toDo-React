@@ -4,6 +4,7 @@ import { Provider } from 'react-redux'
 import store from './store'
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import Home from "./pages/Home"
+import Cadastro from "./pages/Cadastro"
 
 
 const routes = createBrowserRouter([
@@ -13,7 +14,7 @@ const routes = createBrowserRouter([
   },
   {
     path: '/novo',
-    element: <h1> nova tarefa</h1>
+    element: <Cadastro />
   }
 ])
 
