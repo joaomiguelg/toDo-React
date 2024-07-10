@@ -5,7 +5,7 @@ import ToDos from "../../containers/ToDos";
 const Home = () => {
   return (
     <>
-      <SideBar />
+      <SideBar showFilters />
       <ToDos />
       <AddButton />
     </>

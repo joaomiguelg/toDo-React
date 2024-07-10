@@ -7,7 +7,6 @@ import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
 import * as enums from "../../utils/enums/Task";
-import Task from "../../models/Task";
 import { cadastrar } from "../../store/reducers/tasks";
 
 export const Form = () => {
@@ -21,9 +20,10 @@ export const Form = () => {
   const submitTask = (event: FormEvent) => {
 
     event.preventDefault()
-    const taskforAdd = new Task(priority, enums.Status.PENDENTE, description,title, 9)
-
-    dispatch(cadastrar(taskforAdd))
+    
+    dispatch(cadastrar({
+      priority, status: enums.Status.PENDENTE, description, title
+    }))
     navigate('/')
   }
 
